@@ -18,6 +18,14 @@ kubectl delete pod <name>
 
 ### Replica Set
 > Pods wrapped inside Replica Set.
+```
+# Create Replica Set
+kubectl create -f replicaset.yaml
+```
+```
+# Delete Replica Set
+kubectl delete replicaset <name>
+```
 
 ### Deployment
 > Replica Set wrapped inside Deployment.
