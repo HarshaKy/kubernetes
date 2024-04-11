@@ -1,0 +1,26 @@
+# Challenge 1
+# YAML List and Dictionary
+
+fruit:
+  yellow:
+    - banana
+  red:
+    - apple
+    - tomato
+    - strawberry
+  orange:
+    - orange
+  green:
+    - watermelon
+    - grapes
+  total: 7
+
+veg:
+  green:
+    - broccoli
+    - cabbage
+    - peppers
+    - lettuce
+  orange:
+    - carrot
+  total: 5
