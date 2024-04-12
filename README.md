@@ -29,3 +29,11 @@ kubectl delete replicaset <name>
 
 ### Deployment
 > Replica Set wrapped inside Deployment.
+```
+# Create deployment
+kubectl create -f deployment.yaml
+```
+```
+# Delete deployment
+kubectl delete deploy <name>
+```
