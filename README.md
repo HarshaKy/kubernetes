@@ -52,3 +52,14 @@ kubectl delete deploy <name>
 # connect to a container with container name
 kubectl exec -it <pod_name> -c <container_name> -- <command>
 ```
+
+### Logs
+```
+# Get logs for a container
+kubectl logs <pod_name> -c <container_name>
+```
+
+### Init Containers
+1. Container that runs before any app containers start in a pod.
+2. Used to setup the env for apps or to perform pre-config tasks.
+3. If init container fails, Kubernetes restarts the pod until it succeeds.
