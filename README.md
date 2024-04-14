@@ -37,3 +37,18 @@ kubectl create -f deployment.yaml
 # Delete deployment
 kubectl delete deploy <name>
 ```
+
+### Multi-container Setup
+> Uses
+1. Health checks
+2. Proxy container
+
+
+### Network structure
+> Each pod gets its own virtual network interface. 
+> wifi -> virtualbox vm / minikube -> kubernetes virtual interface cr0 -> each pod's own virtual interface
+
+```
+# connect to a container with container name
+kubectl exec -it <pod_name> -c <container_name> -- <command>
+```

@@ -5,7 +5,7 @@ metadata:
   labels:
     name:  mydeployment
 spec:
-  replicas: 5
+  replicas: 2
   selector:
     matchLabels:
       server: nginx
@@ -28,3 +28,12 @@ spec:
             cpu: "500m"
         ports:
           - containerPort: 80
+      - name: server
+        image: ubuntu
+        resources:
+          limits:
+            memory: "500Mi"
+            cpu: "500m"
+        command: ["/bin/bash", "-c"]
+        args:
+          - sleep 300
