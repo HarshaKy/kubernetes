@@ -76,3 +76,13 @@ kubectl exec -it <pod_name> -c <container_name> -- <command>
 ```
 
 ### Ingress
+1. An API object that manages externall access to the services in a cluster
+2. Typically HTTP
+3. Ingress can provide load balancing, SSL termination and name-based virtual hositng
+4. Set of routing rules that govern how external users access services in a Kubernetes cluster
+
+```
+minikube addons enable ingress
+kubectl create -f ingress.yaml
+kubectl get ingress
+```
