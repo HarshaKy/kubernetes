@@ -2,7 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: web-ingress
-  # annotations:
+  # annotations: 
   #   nginx.ingress.kubernetes.io/rewrite-target: /
   labels:
     name: web-ingress
@@ -15,6 +15,6 @@ spec:
         path: "/"
         backend:
           service:
-            name: websrvc
-            port: 
-              number: 8080
+            name: websrvc # This is the name of the service
+            port:
+              number: 8080 # This is the port that the service listens on

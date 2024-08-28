@@ -90,3 +90,11 @@ minikube addons enable ingress
 kubectl create -f ingress.yaml
 kubectl get ingress
 ```
+> Pod -> service -> ingress
+1. Annotations: can be used to set up specific rules and access levels
+2. Nginx: most popular proxy / can also be used as a web server
+3. Used to tell ngnix what to do with the traffic it recieves
+```
+annotations: 
+  nginx.ingress.kubernetes.io/rewrite-target: /
+```
