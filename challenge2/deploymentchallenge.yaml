@@ -20,11 +20,11 @@ spec:
         os: ubuntu
     spec:
       containers:
-      - name: ubuntu
+      - name: ubuntucontainer
         image: ubuntu:latest
         resources:
           limits:
-            memory: "2000M"
-            cpu: "1100m"
+            memory: "500m"
+            cpu: "500m"
         ports:
           - containerPort: 8080

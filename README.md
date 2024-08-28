@@ -43,11 +43,14 @@ kubectl delete deploy <name>
 > Uses
 1. Health checks
 2. Proxy container
-
+```
+# connect to a deployed container and run a command
+kubectl exec -it mydeployment-67f8bc8976-45z52 -c server -- /bin/bash
+```
 
 ### Logs
 ```
-# Get logs for a container
+# Get logs for a container. Useful to look at container outputs.
 kubectl logs <pod_name> -c <container_name>
 ```
 
