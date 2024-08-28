@@ -98,3 +98,9 @@ kubectl get ingress
 annotations: 
   nginx.ingress.kubernetes.io/rewrite-target: /
 ```
+
+### Communication between pods
+> To connect, use the below URL
+```
+my-svc.my-namespace.svc.cluster-domain.example
+```
