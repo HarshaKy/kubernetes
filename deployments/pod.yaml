@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: nginx
   labels:
-    name: myPod
+    name: mypod
     type: proxy
 spec:
   containers:

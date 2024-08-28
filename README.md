@@ -29,6 +29,7 @@ kubectl delete replicaset <name>
 
 ### Deployment
 > Replica Set wrapped inside Deployment.
+Useful for rolling updates. Creates a new pod and deletes an old one. If successful then continues. 
 ```
 # Create deployment
 kubectl create -f deployment.yaml

@@ -1,17 +1,23 @@
 apiVersion: apps/v1
-kind: ReplicaSet
+kind: Deployment
 metadata:
-  name: myreplicaset
+  name:  mydeployment
+  labels:
+    name:  mydeployment
 spec:
-  replicas: 3
+  replicas: 5
   selector:
     matchLabels:
-      app: nginx # should have the same label as the pod (metadata)
+      server: nginx
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
   template:
     metadata:
-      name: proxy
       labels:
-        app: nginx
+        server: nginx
     spec:
       containers:
       - name: nginxcontainer
