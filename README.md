@@ -104,3 +104,25 @@ annotations:
 ```
 my-svc.my-namespace.svc.cluster-domain.example
 ```
+
+### Storage
+> Persistent Volumes
+1. Storage that is not tied to a pod.
+2. Can be used by multiple pods.
+3. Can be dynamically provisioned.
+4. Can be manually provisioned.
+> Persistent Volume Claims
+1. Request for storage by a pod.
+2. Binds a pod to a persistent volume.
+3. Can be used to request specific storage.
+4. Can be used to request storage with specific access modes.
+> Storage Classes
+1. Used to define different types of storage.
+2. Can be used to dynamically provision storage based on the class.
+> Static vs Dynamic Storage
+1. Static: Admin creates a persistent volume, storage class and a persistent volume claim.
+2. Dynamic: Admin provides a storage class and a persistent volume claim. Kubernetes creates the persistent volume.
+> Access Modes
+1. ReadWriteOnce: Can be used by a single node.
+2. ReadOnlyMany: Can be read by many nodes.
+3. ReadWriteMany: Can be read and written by many nodes.
