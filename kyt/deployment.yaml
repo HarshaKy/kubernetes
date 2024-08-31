@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-k8s-deployment
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: node-k8s-pod
+  template:
+    metadata:
+      labels:
+        app: node-k8s-pod
+    spec:
+      containers:
+      - name: node-k8s-container
+        image: harshaky/node_k8s
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 3000

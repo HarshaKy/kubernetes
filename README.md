@@ -131,6 +131,7 @@ my-svc.my-namespace.svc.cluster-domain.example
 > Access container
 ```
 kubectl exec -it <pod_name> -c <container_name> -- /bin/bash
+kubectl exec node-67c5df45d4-5fcqm -- wget -qO- http://nginx
 ```
 > Get logs
 ```
