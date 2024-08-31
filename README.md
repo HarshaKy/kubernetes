@@ -126,3 +126,29 @@ my-svc.my-namespace.svc.cluster-domain.example
 1. ReadWriteOnce: Can be used by a single node.
 2. ReadOnlyMany: Can be read by many nodes.
 3. ReadWriteMany: Can be read and written by many nodes.
+
+### Commands
+> Access container
+```
+kubectl exec -it <pod_name> -c <container_name> -- /bin/bash
+```
+> Get logs
+```
+kubectl logs <pod_name> -c <container_name>
+```
+> Describe pod / any object
+```
+kubectl describe pod <pod_name>
+```
+> Object into yaml
+```
+kubectl get pod <pod_name> -o yaml > <file-name>.yaml
+```
+> Apply changes on the fly
+```
+kubectl edit delpoyment <deployment_name>
+```
+> See CPU and memory usage
+```
+kubectl top pod <pod-name>
+```
