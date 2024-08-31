@@ -152,3 +152,26 @@ kubectl edit delpoyment <deployment_name>
 ```
 kubectl top pod <pod-name>
 ```
+> Create service from deployment
+```
+kubectl expose deployment <deployment_name> --type=NodePort --port=8080
+kubectl expose deploy node-deployment --port=3000
+# type can be ClusterIP, NodePort, LoadBalancer
+```
+> ssh into minikube cluster
+```
+minikube ssh
+```
+> Curl pod from inside cluster
+```
+curl <cluster-ip>:<port>
+```
+> Scale deployment
+```
+kubectl scale deployment <deployment_name> --replicas=3
+```
+> Rolling updates
+```
+kubectl set image deployment <deployment_name> <container_name>=<new_image>
+kubectl rollout status deployment <deployment_name>
+```
